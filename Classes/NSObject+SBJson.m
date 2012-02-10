@@ -33,11 +33,11 @@
 
 @implementation NSObject (NSObject_SBJsonWriting)
 
-- (NSString *)JSONRepresentation {
+- (NSString *)AFJSONRepresentation {
     SBJsonWriter *writer = [[SBJsonWriter alloc] init];    
     NSString *json = [writer stringWithObject:self];
     if (!json)
-        NSLog(@"-JSONRepresentation failed. Error is: %@", writer.error);
+        NSLog(@"-AFJSONRepresentation failed. Error is: %@", writer.error);
     return json;
 }
 
@@ -47,11 +47,11 @@
 
 @implementation NSString (NSString_SBJsonParsing)
 
-- (id)JSONValue {
+- (id)AFJSONValue {
     SBJsonParser *parser = [[SBJsonParser alloc] init];
     id repr = [parser objectWithString:self];
     if (!repr)
-        NSLog(@"-JSONValue failed. Error is: %@", parser.error);
+        NSLog(@"-AFJSONValue failed. Error is: %@", parser.error);
     return repr;
 }
 
@@ -61,11 +61,11 @@
 
 @implementation NSData (NSData_SBJsonParsing)
 
-- (id)JSONValue {
+- (id)AFJSONValue {
     SBJsonParser *parser = [[SBJsonParser alloc] init];
     id repr = [parser objectWithData:self];
     if (!repr)
-        NSLog(@"-JSONValue failed. Error is: %@", parser.error);
+        NSLog(@"-AFJSONValue failed. Error is: %@", parser.error);
     return repr;
 }
 

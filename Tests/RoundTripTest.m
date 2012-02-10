@@ -93,10 +93,10 @@
         NSString *output = [NSString stringWithContentsOfFile:outpath encoding:NSUTF8StringEncoding error:&error];
         STAssertNotNil(output, @"%@ - %@", outpath, error);
 
-        id object = [input JSONValue];
+        id object = [input AFJSONValue];
         STAssertNotNil(object, nil);
 
-        NSString *json = [object JSONRepresentation];
+        NSString *json = [object AFJSONRepresentation];
         STAssertNotNil(json, nil);
 
         json = [json stringByAppendingString:@"\n"];
@@ -115,10 +115,10 @@
         NSString *output = [NSString stringWithContentsOfFile:outpath encoding:NSUTF8StringEncoding error:&error];
         STAssertNotNil(output, @"%@ - %@", outpath, error);
         
-        id object = [input JSONValue];
+        id object = [input AFJSONValue];
         STAssertNotNil(object, nil);
         
-        NSString *json = [object JSONRepresentation];
+        NSString *json = [object AFJSONRepresentation];
         STAssertNotNil(json, nil);
         
         json = [json stringByAppendingString:@"\n"];

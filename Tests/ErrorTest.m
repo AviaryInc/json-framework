@@ -109,7 +109,7 @@ STAssertTrue([e rangeOfString:s].location != NSNotFound, @"%@ vs %@", e, s)
         
         // We don't check the convenience category here, like we do for parsing,
         // because the category is explicitly on the NSArray and NSDictionary objects.
-        // STAssertNil([fragment JSONRepresentation], nil);
+        // STAssertNil([fragment AFJSONRepresentation], nil);
         
         STAssertNil([writer stringWithObject:fragment], @"%@", fragment);
         SBAssertStringContains(parser.error, @"Not valid type for JSON");

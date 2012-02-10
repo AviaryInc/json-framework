@@ -43,7 +43,7 @@
  
  @see @ref objc2json
  */
-- (NSString *)JSONRepresentation;
+- (NSString *)AFJSONRepresentation;
 
 @end
 
@@ -60,7 +60,7 @@
  
  @see @ref json2objc
  */
-- (id)JSONValue;
+- (id)AFJSONValue;
 
 @end
 
@@ -74,6 +74,6 @@
  
  @see @ref json2objc
  */
-- (id)JSONValue;
+- (id)AFJSONValue;
 
 @end
